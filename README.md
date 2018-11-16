@@ -30,9 +30,9 @@ Table of Contents
 ![image](https://github.com/wuhao704/chatBot/blob/master/screenshot.png)
 
 
-## Before you start
+## Before You Start
 
-Make sure your environment is correct. Especially the version of python, This project is not support the python 3.7.0 and later, and if your version of python is 3.7.0 or later, I suggest you use the [pyenv](https://github.com/pyenv/pyenv#installation) or [virtualenv](https://virtualenv.pypa.io/en/latest/installation/) to control version. The version of django and tensorflow is also significant.
+Make sure your environment is correct. Especially the version of python, This project does not support the python 3.7.0 and later, and if your version of python is 3.7.0 or later, I suggest you use the [pyenv](https://github.com/pyenv/pyenv#installation) or [virtualenv](https://virtualenv.pypa.io/en/latest/installation/) to control version. The version of django and tensorflow is also significant.
 
 If you are interested in the machine learning part of this project, like how it works and what model is based on, or other details, you can check in this link: https://github.com/bshao001/ChatLearner .
 
@@ -41,8 +41,15 @@ If you are interested in the machine learning part of this project, like how it 
 - Step 1:
 
   `git clone https://github.com/wuhao704/chatBot.git`
+  
+- step 2:
 
-- Step 2:
+  **Important: At present, this project have not trained model! You could train the model by yourself, or use the trained model by others. It is obvious that you will spend a lot of time and energy if you train the model by yourself. So, *[here](https://drive.google.com/file/d/1mVWFScBHFeA7oVxQzWb8QbKfTi3TToUr/view)* is the trained model by *[Bo Shao](https://github.com/bshao001)*.**
+  
+  If you download it, you need to unzip that file, and copy the Result folder to the Data folder.
+  
+
+- Step 3:
 
   `cd chatBot/chatchat`
 
@@ -63,13 +70,13 @@ If you are interested in the machine learning part of this project, like how it 
 
   Note: the port 8081 is not important, you can change it to others. The default port is 8080.
 
-- Step 3:
+- Step 4:
 
   Open your web browser and enter `127.0.0.1:8081/chatchat/` in the address bar. 
 
   If this project is in your virtual machine and you want to use it on the host machine, then you should modify the `127.0.0.1` to your VM's IP address.
 
-- Step 4:
+- Step 5:
 
   Congratulations, you can chat with him on the web page. Enjoy it.
 
