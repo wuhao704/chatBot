@@ -41,7 +41,7 @@ If you are interested in the machine learning part of this project, like how it 
 
   `git clone https://github.com/wuhao704/chatBot.git`
   
-- step 2:
+- Step 2:
 
   **Important: At present, this project have not trained model! You could train the model by yourself, or use the trained model by others. It is obvious that you will spend a lot of time and energy if you train the model by yourself. So, *[here](https://drive.google.com/file/d/1mVWFScBHFeA7oVxQzWb8QbKfTi3TToUr/view)* is the trained model by *[Bo Shao](https://github.com/bshao001)*.**
   
