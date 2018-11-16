@@ -40,7 +40,7 @@ If you are interested in the machine learning part of this project, like how it 
 
 - Step 1:
 
-  `git clone https://github.com/wuhao704/chatBot`
+  `git clone https://github.com/wuhao704/chatBot.git`
 
 - Step 2:
 
