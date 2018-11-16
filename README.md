@@ -1,6 +1,6 @@
 # chatBot
 
-![image](https://img.shields.io/badge/python-3.6.3-blue.svg)![image](https://img.shields.io/badge/django-2.1.3-blue.svg)![image](https://img.shields.io/badge/tensorflow-1.12.0-brightgreen.svg)![image](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)
+![image](https://img.shields.io/badge/python-3.6.3-blue.svg)  ![image](https://img.shields.io/badge/django-2.1.3-blue.svg)  ![image](https://img.shields.io/badge/tensorflow-1.12.0-brightgreen.svg)  ![image](https://img.shields.io/badge/License-Apache%202.0-yellowgreen.svg)
 
 A robot that you can chat with him on the web page, but you might think he is stupid.
 
