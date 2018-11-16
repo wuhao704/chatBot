@@ -4,6 +4,19 @@
 
 A robot that you can chat with him on the web page, but you might think he is stupid.
 
+Table of Contents
+=================
+
+* [<a id="user\-content\-chatbot" href="\#chatbot"></a>chatBot](#chatbot)
+  * [<a id="user\-content\-requirement" href="\#requirement"></a>Requirement](#requirement)
+  * [<a id="user\-content\-screenshot" href="\#screenshot"></a>Screenshot](#screenshot)
+  * [<a id="user\-content\-before\-you\-start" href="\#before\-you\-start"></a>Before you start](#before-you-start)
+  * [<a id="user\-content\-start" href="\#start"></a>Start](#start)
+  * [<a id="user\-content\-reference" href="\#reference"></a>Reference](#reference)
+  * [<a id="user\-content\-license" href="\#license"></a>License](#license)
+
+
+
 ## Requirement
 
 - Python: 3.6.3
@@ -45,7 +58,7 @@ If you are interested in the machine learning part of this project, like how it 
 
   ```shell
   cd chatBot
-  python3 manager.py runserver 0.0.0.0:8081
+  python3 manage.py runserver 0.0.0.0:8081
   ```
 
   Note: the port 8081 is not important, you can change it to others. The default port is 8080.
