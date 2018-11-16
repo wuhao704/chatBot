@@ -1,0 +1,129 @@
+<!--    Copyright 2018 Wu Hao. 
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+ -->
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width" />
+			<title>ChatChat</title>
+			<style type="text/css" media="screen">
+				.head{
+					height: 60px;
+					width: 720px;
+					margin: 0 auto;
+					font-size: 30px;
+					text-align: center;
+				}
+
+				.chatBox{
+					height: 400px;
+					width: 720px;
+					margin: 0 auto;
+					font-size: 25px;
+					margin-top: 10px;
+					opacity: 0.55;
+					overflow: auto;
+					background: white;
+				}
+
+				.inputBox{
+					height: 35px;
+					width: 720px;
+					margin: 0 auto;
+					margin-top: 10px;
+				}
+				.inputBox #inputArea{
+					height:30px;
+					width:620px;
+					font-size: 20px;
+					text-align: center;
+					background: rgba(0,0,0,0.2);
+					color: white;
+				}
+
+				.inputBox #subButton{
+					height: 30px;
+					width: 80px;
+					margin-top: 1px;
+					font-size: 20px;
+					background: rgba(0,0,0,0.2);
+					color: white;
+				}
+				
+				
+
+				.robotSay{
+					margin: 10px;
+				}
+				.robotSay span{
+					display:inline-block;
+		            background:#0181cc;
+		            border-radius:10px;
+		            color:#fff;
+		            padding:5px 10px;
+					margin-left: 25px;
+
+				}
+
+				.me{
+					margin:10px;
+		            text-align:right;
+				}
+				.me span{
+					display:inline-block;
+		            background:#ef8201;
+				    border-radius:10px;
+					color:#fff;
+					padding:5px 10px;
+					margin-right: 25px;
+
+				}
+
+
+			</style>
+		</head>
+		<body style="background: url('../../static/bg.jpg'">
+			<div class="head">chatchat</div>
+			<div class="chatBox" id="chatBox">
+			</div>
+
+			<div class="inputBox">
+				<input type="text" name="inputText" id="inputArea" autocomplete="off" value="Type here..." onfocus="if (value =='Type here...'){value =''} " onblur="if (value == ''){value = 'Type here...'}" onkeydown="if (event.keyCode == 13){subButton.click()}"></input>
+				<input type="button" id="subButton" value="send" onclick=send() ></input>
+
+				<script type="text/javascript" src="/static/jquery.js"></script>
+				<script type="text/javascript" charset="utf-8">
+					function send(){
+						var inputText=document.getElementById('inputArea').value;
+						$('#inputArea').val('')
+						$('#chatBox').append('<div class="me" id="me">Me<br><span>' + inputText + '</span></div>');
+						$('#chatBox').scrollTop($('#chatBox')[0].scrollHeight);
+						$.ajax({
+							url:"/chatchat/",
+							type:'POST',
+							cache: false,
+							data: {inputText: inputText},
+
+							success: function (data) {
+								$('#chatBox').append("<div class='robotSay' id='robotSay'>Robot<br><span>" + data + "</span></div>");
+								$('#chatBox').scrollTop($('#chatBox')[0].scrollHeight);
+							}
+						});
+					}
+				</script>
+			</div>
+		</body>
+	</html>
